@@ -21,4 +21,12 @@ This table reports domain-level `MASE` and `Rank` for all single-model TSFMs and
 | **ALL Domains (n=97)** |  MASE  | 1.935 |   1.897   |  1.655  |  `1.571`  | 1.593  |   1.795   |  1.670  |   1.626   |   1.573   |  **1.570**   |
 |                        |  Rank  | 7.722 |   5.856   |  6.247  |   4.959   | 4.639  |   3.845   |  4.691  |   3.546   |  `3.495`  |  **3.412**   |
 
-This table supports two conclusions. First, ZooCast-Top1 is not helped by only a few anomalous datasets: on **ALL Domains**, it achieves the best `MASE` and the best `Rank`, with gains also visible across multiple domains. Second, the fine-grained view is consistent with the aggregated conclusion: because the strongest single TSFM changes across domains, the relevant target is not to beat the oracle best model everywhere, but to maintain the best overall average behavior under such heterogeneity.
+The accompanying figure provides a visual summary of the cross-domain `Rank` structure. Each sector corresponds to one domain, and within each sector models are ordered from the worst rank at the center to the best rank at the outer ring. This makes the domain-dependent variation more explicit: the strongest single TSFM changes across domains, while ZooCast remains near the outer ring overall.
+
+![image-20260331195239512](Table 4. Per-domain performance of ZooCast-Top1 and single-model baselines.assets/image-20260331195239512.png)
+
+Together, the table and figure support two conclusions:
+
+1. ZooCast-Top1 is not helped by only a few anomalous datasets. In the table, it achieves the best overall `MASE` and the best overall `Rank` on **ALL Domains**, with gains also visible across multiple individual domains. In the figure, ZooCast also appears consistently near the outer boundary across sectors, indicating strong average rank performance rather than an isolated gain on only a few tasks.
+
+2. The fine-grained view is consistent with the aggregated conclusion. The figure makes it visually clear that the strongest single TSFM differs across domains, rather than one model staying outermost everywhere. Therefore, the relevant target is not to beat the oracle best model on every domain, but to maintain the best overall average behavior under such cross-domain heterogeneity, which is exactly what ZooCast-Top1 achieves in the table.
