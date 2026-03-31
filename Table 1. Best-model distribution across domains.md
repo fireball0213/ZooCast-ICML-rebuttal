@@ -15,7 +15,7 @@ This table reports how often each TSFM is the best single model across the 97 GI
 
 To further examine whether this pattern is stable as the zoo expands, the accompanying figure shows the winner-count distribution under `sMAPE` when the zoo size increases gradually in release order. The figure indicates that the non-dominance pattern is not a one-shot artifact of the final zoo composition: as more TSFMs are added, the identity of the winner continues to shift, and the winner counts remain distributed across multiple models rather than collapsing to one persistent dominant TSFM.
 
-![image-20260331194622126](Table 1. Best-model distribution across domains.assets/image-20260331194622126.png)
+![Table 1 figure](figs/table1_zoo_growth.png)
 
 Together, the table and figure reveal three clear facts:
 

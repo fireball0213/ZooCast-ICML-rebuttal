@@ -23,7 +23,7 @@ This table reports domain-level `MASE` and `Rank` for all single-model TSFMs and
 
 The accompanying figure provides a visual summary of the cross-domain `Rank` structure. Each sector corresponds to one domain, and within each sector models are ordered from the worst rank at the center to the best rank at the outer ring. This makes the domain-dependent variation more explicit: the strongest single TSFM changes across domains, while ZooCast remains near the outer ring overall.
 
-![image-20260331195239512](Table 4. Per-domain performance of ZooCast-Top1 and single-model baselines.assets/image-20260331195239512.png)
+![Table 4 figure](figs/table4_rank_domain.png)
 
 Together, the table and figure support two conclusions:
 
