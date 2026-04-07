@@ -25,7 +25,7 @@ The figure indicates that the non-dominance pattern is not a one-shot artifact o
 
 ### Table 11(b): Aggregate performance before and after adding Time-MoE
 
-<img src="figs/table11_2.png" alt="table11_2" style="zoom:50%;" />
+<img src="figs/table11_2.png" alt="table11_2" style="zoom: 25%;" />
 
 We report the aggregate results before and after adding **Time-MoE (TMoE.50)** while keeping the evaluation protocol aligned with the main setting of **Table 2** in the paper: aggregated results on GIFT-Eval under zero-shot forecasting. We additionally include **CRPS** here for completeness. **Top-3 Best** denotes a static ensemble formed by the three currently best models under sMAPE. For all metrics, lower is better. Rank is derived by ordering methods using sMAPE on each configuration and then aggregating ranks across configurations. Within each major region, the best result is bolded in red, and the second best is underlined in blue.
 
@@ -48,3 +48,13 @@ The Time-MoE experiment serves two purposes simultaneously:
 
 - It directly addresses the zoo-coverage concern by testing a concrete additional TSFM rather than reasoning indirectly.
 - It also highlights the central growing-zoo property of ZooCast: even when a newly added model is globally weak but locally useful, dynamic routing can absorb that sparse new benefit, whereas fixed strong policies typically cannot.
+
+---
+
+### Implementation details of Time-MoE
+
+Our implementation of Time-MoE follows the latest official GitHub codebase  
+(`https://github.com/Time-MoE/Time-MoE`) and the public Hugging Face model release  
+(`https://huggingface.co/AppleDog/TimeMoE-50M/tree/main`).
+
+We use the 50M version, namely TMoE.50, in our experiments. Since the official release does not provide a GIFT-Eval-specific adaptation recipe, our setting for `context_len` strictly follows the latest evaluation configuration in the official `run_eval.py` script. In this sense, the current Time-MoE result should be understood as a faithful implementation under the official public code/model interface, rather than a benchmark-specific tuned variant.
