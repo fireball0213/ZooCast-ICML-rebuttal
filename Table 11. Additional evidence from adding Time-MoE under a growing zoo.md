@@ -4,7 +4,7 @@ This section examines whether adding one concrete additional TSFM, namely **Time
 
 ### Figure 11(a): Winner-count distribution under sMAPE before and after adding Time-MoE
 
-<img src="figs/table11_1.png" alt="table11_1" style="zoom: 20%;" />
+<img src="figs/table11_1.png" alt="table11_1" style="zoom: 40%;" />
 
 We compare the winner-count distribution across zoo sizes under the original 9-model zoo and the expanded 10-model zoo after adding **Time-MoE (TMoE.50)** in release order. The x-axis represents zoo size, growing from left to right according to the public release order of the included TSFMs. According to the public Hugging Face release information, Time-MoE was released on 2024.09.21, so in the current zoo it should be regarded as a relatively earlier model.
 
@@ -25,7 +25,7 @@ The figure indicates that the non-dominance pattern is not a one-shot artifact o
 
 ### Table 11(b): Aggregate performance before and after adding Time-MoE
 
-<img src="figs/table11_2.png" alt="table11_2" style="zoom: 25%;" />
+<img src="figs/table11_2.png" alt="table11_2" style="zoom: 50%;" />
 
 We report the aggregate results before and after adding **Time-MoE (TMoE.50)** while keeping the evaluation protocol aligned with the main setting of **Table 2** in the paper: aggregated results on GIFT-Eval under zero-shot forecasting. We additionally include **CRPS** here for completeness. **Top-3 Best** denotes a static ensemble formed by the three currently best models under sMAPE. For all metrics, lower is better. Rank is derived by ordering methods using sMAPE on each configuration and then aggregating ranks across configurations. Within each major region, the best result is bolded in red, and the second best is underlined in blue.
 
