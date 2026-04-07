@@ -4,7 +4,7 @@ This section examines whether adding one concrete additional TSFM, namely **Time
 
 ### Figure 11(a): Winner-count distribution under sMAPE before and after adding Time-MoE
 
-<img src="figs/table11_1.png" alt="table11_1" style="zoom: 10%;" />
+<img src="figs/table11_1.png" alt="table11_1" style="zoom: 33%;" />
 
 We compare the winner-count distribution across zoo sizes under the original 9-model zoo and the expanded 10-model zoo after adding **Time-MoE (TMoE.50)** in release order. The x-axis represents zoo size, growing from left to right according to the public release order of the included TSFMs. According to the public Hugging Face release information, Time-MoE was released on 2024.09.21, so in the current zoo it should be regarded as a relatively earlier model.
 
